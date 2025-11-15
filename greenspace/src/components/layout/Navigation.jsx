@@ -1,13 +1,24 @@
 import React from "react";
 
-const Navigation = () => {
+export default function Navigation() {
+  const links = [
+    { label: "Home", href: "#" },
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="flex space-x-6 text-gray-600 font-medium">
-      <a href="#about" className="hover:text-green-700">About</a>
-      <a href="#projects" className="hover:text-green-700">Projects</a>
-      <a href="#contact" className="hover:text-green-700">Contact</a>
+    <nav className="flex gap-6">
+      {links.map((l, i) => (
+        <a
+          key={i}
+          href={l.href}
+          className="text-gray-700 hover:text-green-700 font-medium"
+        >
+          {l.label}
+        </a>
+      ))}
     </nav>
   );
-};
-
-export default Navigation;
+}

@@ -1,27 +1,32 @@
 import React from "react";
 import Card from "../common/Card";
-import project1 from "../../assets/images/project1.jpg";
-import project2 from "../../assets/images/project2.jpg";
 
-const projects = [
-  { name: "Urban Roof Garden", img: project1 },
-  { name: "Eco Backyard", img: project2 },
-  { name: "Community Park", img: project1 },
-];
+export default function Projects() {
+  const projects = [
+    {
+      name: "Urban Roof Garden",
+      img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      name: "Eco Backyard",
+      img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      name: "Community Park",
+      img: "https://images.unsplash.com/photo-1505577058444-a3dab90d4253?auto=format&fit=crop&w=800&q=80",
+    },
+  ];
 
-const Projects = () => {
   return (
-    <section id="projects" className="bg-green-100 py-20">
-      <div className="max-w-6xl mx-auto text-center px-6">
-        <h3 className="text-3xl font-semibold mb-6 text-green-700">Our Projects</h3>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((p, i) => (
-            <Card key={i} title={p.name} img={p.img} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((p, i) => (
+        <Card
+          key={i}
+          title={p.name}
+          description="A sustainable green initiative by GreenSpace."
+          img={p.img}
+        />
+      ))}
+    </div>
   );
-};
-
-export default Projects;
+}

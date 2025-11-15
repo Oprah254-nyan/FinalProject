@@ -1,28 +1,27 @@
 import React from "react";
 import Button from "../common/Button";
-import heroImage from "../../assets/images/hero.jpg";
+import Container from "../common/Container";
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="bg-green-100 py-16 px-6 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-5xl font-bold text-green-700 mb-4">
-          Grow Greener with GreenSpace
-        </h2>
-        <p className="text-gray-700 mb-6">
-          We design eco-friendly spaces that inspire harmony between people and nature.
-        </p>
-        <Button className="bg-green-600 hover:bg-green-700">Discover More</Button>
-      </div>
-      <div className="mt-10">
-        <img
-          src={heroImage}
-          alt="GreenSpace Eco Landscaping"
-          className="mx-auto rounded-2xl shadow-lg w-full max-w-3xl"
-        />
-      </div>
+    <section className="py-32 bg-green-100">
+      <Container>
+        <div className="text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-green-800">
+            Designing Greener Futures
+          </h1>
+
+          <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg">
+            GreenSpace transforms ordinary environments into vibrant,
+            sustainable ecosystems where people and nature thrive together.
+          </p>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <Button>Get Started</Button>
+            <Button className="bg-green-900">Learn More</Button>
+          </div>
+        </div>
+      </Container>
     </section>
   );
-};
-
-export default Hero;
+}

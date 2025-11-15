@@ -1,18 +1,36 @@
 import React from "react";
+import Container from "../common/Container";
 import Button from "../common/Button";
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <section id="contact" className="bg-white py-16 text-center">
-      <h3 className="text-3xl font-semibold mb-4 text-green-700">Get In Touch</h3>
-      <p className="mb-6 text-gray-700">Have a project or idea? Let’s grow it together!</p>
-      <form className="flex flex-col md:flex-row justify-center gap-3 max-w-xl mx-auto">
-        <input type="text" placeholder="Your Name" className="px-4 py-3 w-full md:w-1/3 rounded-lg border border-gray-300 focus:outline-none" />
-        <input type="email" placeholder="Your Email" className="px-4 py-3 w-full md:w-1/3 rounded-lg border border-gray-300 focus:outline-none" />
-        <Button className="bg-green-600 hover:bg-green-700">Send Message</Button>
-      </form>
+    <section id="contact" className="py-20">
+      <Container>
+        <h2 className="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
+        <p className="text-gray-700 mb-6 max-w-xl">
+          Have a project in mind? We’d love to help bring your green vision to
+          life.
+        </p>
+
+        <form className="grid gap-4 max-w-lg">
+          <input
+            className="p-3 border rounded-lg"
+            placeholder="Your Name"
+            type="text"
+          />
+          <input
+            className="p-3 border rounded-lg"
+            placeholder="Email Address"
+            type="email"
+          />
+          <textarea
+            className="p-3 border rounded-lg"
+            placeholder="Message"
+            rows="4"
+          />
+          <Button>Send Message</Button>
+        </form>
+      </Container>
     </section>
   );
-};
-
-export default Contact;
+}
