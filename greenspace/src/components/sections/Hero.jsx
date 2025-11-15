@@ -1,27 +1,44 @@
+// src/components/sections/Hero.jsx
 import React from "react";
 import Button from "../common/Button";
-import Container from "../common/Container";
 
 export default function Hero() {
   return (
-    <section className="py-32 bg-green-100">
-      <Container>
-        <div className="text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-green-800">
-            Designing Greener Futures
-          </h1>
+    <section className="relative w-full h-[90vh] flex items-center justify-center text-center">
 
-          <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg">
-            GreenSpace transforms ordinary environments into vibrant,
-            sustainable ecosystems where people and nature thrive together.
-          </p>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      />
 
-          <div className="mt-8 flex justify-center gap-4">
-            <Button>Get Started</Button>
-            <Button className="bg-green-900">Learn More</Button>
-          </div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl px-4">
+        <h1 className="text-white text-4xl md:text-6xl font-extrabold leading-tight">
+          Designing Greener<br />Futures
+        </h1>
+
+        <p className="text-gray-200 mt-4 text-lg md:text-xl">
+          GreenSpace transforms ordinary environments into vibrant,
+          sustainable ecosystems where people and nature thrive together.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl">
+            Get Started
+          </Button>
+
+          <Button className="bg-white/80 text-green-700 hover:bg-white px-8 py-3 rounded-xl">
+            Learn More
+          </Button>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

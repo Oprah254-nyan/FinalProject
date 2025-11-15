@@ -14,8 +14,11 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
+import Stats from "./components/sections/Stats";
 
-// Inline Features Section
+// ----------------------------
+// INLINE FEATURES SECTION
+// ----------------------------
 const FeatureList = () => {
   const features = [
     {
@@ -84,6 +87,9 @@ export default function App() {
 
         {/* HERO */}
         <Hero />
+
+        {/* STATS */}
+        <Stats />
 
         {/* EMAIL SIGNUP BAR */}
         <section className="py-8 bg-white border-y border-green-100">
@@ -156,26 +162,31 @@ export default function App() {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
               <Card
                 title="Rooftop Planter Kit"
                 description="Lightweight modular planter ideal for balconies."
                 img="https://images.unsplash.com/photo-1601597119198-4d6a3f9f7cd6?auto=format&fit=crop&w=800&q=80"
               />
+
               <Card
                 title="Native Pollinator Seeds"
-                description="Flower mixes designed to attract butterflies and bees."
+                description="Flower seed mix designed to attract bees and butterflies."
                 img="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
               />
+
               <Card
                 title="Irrigation Drip Kit"
-                description="Water-efficient irrigation system for easy plant care."
+                description="Water-efficient drip system for low-maintenance gardening."
                 img="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80"
               />
+
               <Card
-                title="Workshop Voucher"
-                description="Gift an interactive design workshop experience."
+                title="Workshop Gift Voucher"
+                description="Give the gift of a hands-on sustainable gardening workshop."
                 img="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80"
               />
+
             </div>
           </Container>
         </section>
