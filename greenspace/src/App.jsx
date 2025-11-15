@@ -15,9 +15,10 @@ import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Stats from "./components/sections/Stats";
+import WhatWeDo from "./components/sections/WhatWeDo"; // ADDED
 
 // ----------------------------
-// INLINE FEATURES SECTION
+// INLINE FEATURES SECTION (you can delete later if replaced by WhatWeDo)
 // ----------------------------
 const FeatureList = () => {
   const features = [
@@ -91,6 +92,9 @@ export default function App() {
         {/* STATS */}
         <Stats />
 
+        {/* WHAT WE DO (FULL SECTION) */}
+        <WhatWeDo />
+
         {/* EMAIL SIGNUP BAR */}
         <section className="py-8 bg-white border-y border-green-100">
           <Container>
@@ -105,6 +109,7 @@ export default function App() {
                 </p>
               </div>
 
+              {/* FIXED INPUT + BUTTON */}
               <div className="flex gap-3">
                 <input
                   aria-label="email"
@@ -118,78 +123,14 @@ export default function App() {
           </Container>
         </section>
 
-        {/* FEATURES */}
-        <FeatureList />
+        {/* PROJECTS */}
+        <Projects />
 
         {/* ABOUT */}
         <About />
 
-        {/* PROJECTS */}
-        <section id="projects" className="py-20 bg-white">
-          <Container>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl lg:text-4xl font-bold text-green-800">
-                Our Projects
-              </h2>
-              <p className="mt-3 text-gray-700 max-w-2xl mx-auto">
-                Recent transformations — rooftop gardens, terraces, community
-                parks, and interactive learning spaces.
-              </p>
-            </div>
-
-            <Projects />
-          </Container>
-        </section>
-
         {/* CONTACT */}
-        <section className="bg-green-50">
-          <Contact />
-        </section>
-
-        {/* PRODUCT GRID */}
-        <section className="py-20 bg-white">
-          <Container>
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-bold text-green-800">
-                Shop Essentials
-              </h3>
-              <a
-                href="#collection"
-                className="text-sm underline text-gray-600"
-              >
-                View all products
-              </a>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-              <Card
-                title="Rooftop Planter Kit"
-                description="Lightweight modular planter ideal for balconies."
-                img="https://images.unsplash.com/photo-1601597119198-4d6a3f9f7cd6?auto=format&fit=crop&w=800&q=80"
-              />
-
-              <Card
-                title="Native Pollinator Seeds"
-                description="Flower seed mix designed to attract bees and butterflies."
-                img="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
-              />
-
-              <Card
-                title="Irrigation Drip Kit"
-                description="Water-efficient drip system for low-maintenance gardening."
-                img="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80"
-              />
-
-              <Card
-                title="Workshop Gift Voucher"
-                description="Give the gift of a hands-on sustainable gardening workshop."
-                img="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80"
-              />
-
-            </div>
-          </Container>
-        </section>
+        <Contact />
 
       </main>
 
