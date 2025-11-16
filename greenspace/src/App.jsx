@@ -15,7 +15,7 @@ import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Stats from "./components/sections/Stats";
-import WhatWeDo from "./components/sections/WhatWeDo"; // ADDED
+import Features from "./components/sections/ Features"; // ADDED
 
 // ----------------------------
 // INLINE FEATURES SECTION (you can delete later if replaced by WhatWeDo)
@@ -89,20 +89,26 @@ export default function App() {
         {/* HERO */}
         <Hero />
 
-        {/* STATS */}
+         {/* STATS */}
         <Stats />
 
-        {/* WHAT WE DO (FULL SECTION) */}
-        <WhatWeDo />
+
+         {/* ABOUT */}
+        <About />
+
+
+        
+    
+
+        
+        < Features />
 
      
 
         {/* PROJECTS */}
         <Projects />
 
-        {/* ABOUT */}
-        <About />
-
+       
         {/* CONTACT */}
         <Contact />
            {/* EMAIL SIGNUP BAR */}
