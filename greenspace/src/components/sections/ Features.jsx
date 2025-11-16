@@ -1,6 +1,6 @@
 import React from "react";
 
-// The new component represents the "New In Store Now" section from the images.
+
 export default function NewInStore() {
   // NOTE: Image URLs are placeholders as the original image data URLs are specific
   // to the GreenSpace component and the images for the furniture section
