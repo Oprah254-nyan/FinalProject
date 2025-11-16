@@ -95,7 +95,17 @@ export default function App() {
         {/* WHAT WE DO (FULL SECTION) */}
         <WhatWeDo />
 
-        {/* EMAIL SIGNUP BAR */}
+     
+
+        {/* PROJECTS */}
+        <Projects />
+
+        {/* ABOUT */}
+        <About />
+
+        {/* CONTACT */}
+        <Contact />
+           {/* EMAIL SIGNUP BAR */}
         <section className="py-8 bg-white border-y border-green-100">
           <Container>
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -122,15 +132,6 @@ export default function App() {
             </div>
           </Container>
         </section>
-
-        {/* PROJECTS */}
-        <Projects />
-
-        {/* ABOUT */}
-        <About />
-
-        {/* CONTACT */}
-        <Contact />
 
       </main>
 
