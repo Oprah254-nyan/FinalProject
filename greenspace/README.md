@@ -1,18 +1,66 @@
-# React + Vite
+# GreenSpace (replace with your Brand Name)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+https://final-project-di3o-hbmdmzwk3-orpha-nyanchama-ombworis-projects.vercel.app/
 
-Currently, two official plugins are available:
+## Project Overview
+GreenSpace is a responsive marketing site showcasing urban green-space design and consulting services focused on healthier cities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Brand Identity
+### Color System
+- Primary: #0b6b3a (Used for main CTA and brand marks — conveys growth & trust)
+- Secondary: #2fa186 (Supporting color for accents and secondary CTAs)
+- Accent: #f59e0b (Highlight/CTA contrast)
+- Neutral dark: #0f1724 (Main text)
+- Neutral light: #f8fafc (Backgrounds)
 
-## React Compiler
+### Typography
+- Headings: Inter — clean geometric sans-serif for modern, tech-friendly feel
+- Body: Roboto — neutral readable body text
+- Font weights: 400, 600, 800
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Design Decisions
+### Layout Adherence
+- Measured spacing in Figma and mapped to Tailwind spacing scale.
+- Container width: `max-w-6xl` to match LG layout proportions.
 
-Note: This will impact Vite dev & build performances.
+### Creative Departures
+- Rewrote all content to reflect an urban ecological practice.
+- MD (tablet) layout stacks hero image under the copy for better readability on mid-breakpoints.
 
-## Expanding the ESLint configuration
+## Component Architecture
+- `components/layout` — header, footer, nav
+- `components/sections` — Hero, Features, About, Contact
+- `components/common` — Button, Card, LazyImage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Performance Optimizations
+- Images optimized to WebP and lazy-loaded.
+- React.memo used for expensive components.
+- Lighthouse: [Add your scores and screenshots in /screenshots]
+
+## Image Credits
+- Hero: Photographer Name — Unsplash (link)
+- Card images: Photographer Name — Pexels (link)
+
+## Installation & Setup
+1. `git clone <repo>`
+2. `cd <repo>`
+3. `npm install`
+4. `npm run dev`
+5. Build: `npm run build`
+
+## Technologies Used
+- React 18+
+- Tailwind CSS 3+
+- Vite
+- ESLint, Prettier
+
+## Challenges & Solutions
+- Challenge 1: Achieving exact spacing — Solution: measured in Figma, extended Tailwind spacing.
+- Challenge 2: Getting Lighthouse perf >85 — Solution: image optimization, lazy loading, removed heavy libs.
+- Challenge 3: Mobile nav accessibility — Solution: keyboard accessible menu and ARIA labels.
+
+## Future Improvements
+- Add dark mode
+- Add CMS for dynamic content
+- Convert to PWA for offline access
